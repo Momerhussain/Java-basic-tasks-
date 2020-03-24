@@ -1,0 +1,60 @@
+ #include<stdio.h>
+  #include<conio.h>   
+ 
+    float convert(float pesoValue, int choice, float amount);
+    void display(int choice, float result);
+     
+    int main()
+    {
+        int choice;
+       float pesoValue, amount, result = 0.0;
+     
+            printf("USD 1 is equivalent to Php ");
+           scanf("%f", &pesoValue);
+           printf("\nPress 1 for PESO to DOLLAR conversion\nPress 2 for DOLLAR to PESO conversion\n");
+         
+                while(1){
+                    printf("\nChoice: ");
+                    scanf("%d", &choice);
+                        if( choice == 0)
+                            return 0;
+                   printf("Amount: ");
+                    scanf("%f", &amount);
+                    result = convert(pesoValue, choice, amount);
+                   display(choice, result);
+                }
+            
+        getch();
+    }
+     
+    float convert(float pesoValue, int choice, float amount)
+    {
+        float result = 0.0;
+     
+            switch(choice){
+     
+                case 1:
+                    result = amount / pesoValue;
+                    break;
+                case 2:
+                    result = amount * pesoValue;
+                    break;
+               default:
+                    break;
+            }
+         
+       return result;
+    }
+     
+    void display(int choice, float result)
+    {
+        switch(choice){
+         
+            case 1:
+                printf(">USD %.2f\n", result); break;
+            case 2:
+                printf(">Php %.2f\n", result); break;
+            default:
+                printf(">Invalid Input\n");
+        }
+   }

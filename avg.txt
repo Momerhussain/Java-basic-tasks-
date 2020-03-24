@@ -1,0 +1,24 @@
+import java.util.Scanner
+public class avg
+{
+     public static void main(String args[])
+     {
+      int a,b,c,sum;
+      float avg;   
+      Scanner input=new Scanner(System.in);
+      System.out.println("Enter marks of 3 subjects");
+      
+      System.out.println("1st subject="+a);
+      a=input.nextInt();
+      System.out.println("2nd subject="+b);
+      b=input.nextInt();
+      System.out.println("3rd subject="+c);
+      c=input.nextInt(); 
+      sum=a+b+c;
+      avg=(sum/300)*100; 
+      System.out.println("Average of 3 subjects is="+avg);
+
+}
+   
+
+}

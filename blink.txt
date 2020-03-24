@@ -1,0 +1,11 @@
+#include<iostream.h>
+#include<constrea.h>
+#include<conio.h>
+
+void main()
+{ clrscr();
+  constream cout;
+  cout<<setclr(500);
+  cout<< "Hello World"<<endl<<"By Sachin Soundar";
+  getch();
+}

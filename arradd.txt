@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class arradd
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int [][] a=new int[4][4];
+int b,c,d,e;
+for(b=0;b<3;b++)
+{
+for(c=0;c<3;c++)
+{System.out.println("ARRAY ["+b+"]["+c+"] ");
+a[b][c]=sc.nextInt();
+}}
+System.out.println("ADDITION");
+d=a[0][0]+a[0][2]+a[1][1]+a[2][0]+a[2][2];
+e=a[0][1]+a[1][0]+a[1][2]+a[2][1];
+System.out.println("SUM 1 ="+d);
+System.out.println("SUM 2 ="+e);
+}}
